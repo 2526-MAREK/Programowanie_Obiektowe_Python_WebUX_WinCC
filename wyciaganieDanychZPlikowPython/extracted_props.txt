@@ -1,0 +1,1 @@
+listOfProps = ['SIMPLE_VALVE_Status', 'alHiHi', 'Left', 'Tag', 'Max', 'ANALOG_INPUT_StatusAlarm', 'FullTagName', 'ElementID', 'Top', 'Label', 'SIMPLE_VALVE_Config', 'alLoLo', 'alTechLo', 'alLo', 'alTechOn', 'ANALOG_INPUT_Config', 'Value', 'alTechHi', 'alHi', 'SIMPLE_VALVE_StatusAlarm', 'Min', 'EngUnits', 'SIMPLE_VALVE_Status02', 'ANALOG_INPUT_Status']

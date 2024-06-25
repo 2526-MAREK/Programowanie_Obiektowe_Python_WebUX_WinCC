@@ -1,0 +1,3203 @@
+
+
+Filename: zczyttywanieaAirKnockerZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywaniearrow_ElectricHeater_A01Plik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Name'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Name'] = wynikTemp['text'][0]['en-US']
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywaniearrow_rightZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieaValveDirectionalZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        if 'Tag'  in json1['props']:
+            czesci = nj['Tag'].split('.')
+            elementIDStr = czesci[2]
+            elementIDInt = int(elementIDStr)
+
+            wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+            nj['Tag'] = wynikTemp['text'][0]['en-US']
+
+            wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+            nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieBigBagZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieCtrVavZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieDigitalInputZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        if len(czesci) > 1:
+            elementIDStr = czesci[2]
+            elementIDInt = int(elementIDStr)
+
+            wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+            #print(elementIDEngUnits)
+            #print(text_jsons)
+            nj['Tag'] = wynikTemp['text'][0]['en-US']
+            wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+            nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieDigitalOutputZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywaniehopperZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        file_content += f"Obiekt_{i+1} ({nj['Label']}):\n  Left: {nj['Left']}\n  Top: {nj['Top']}\n\n"
+
+    nameOfFileTemp = filename.split('.')
+    file_path = f'lokalizacja_obiektów_HOPPER_{nameOfFileTemp[0]}.txt'
+    with open(file_path, 'w') as file:
+        file.write(file_content)
+
+
+    vbs_script_content = ""
+    dictionary_array = "\tDim hopperArray(" + str(len(new_jsons)) + ")\n"
+
+    #unique_keys = ["EngUnits", "alHiLoOn", "alHiHiLoLoOn", "alTechOn", "spOn", "Label"]
+
+    def is_number(value):
+        try:
+            float(value.replace(',', '.'))  # Sprawdzanie, czy wartość może być floatem
+            return True
+        except ValueError:
+            return False
+
+
+    for i, nj in enumerate(new_jsons):
+        # Usunięcie określonych pól
+        nj.pop("Left", None)
+        nj.pop("Top", None)
+        nj.pop("ElementID", None)
+
+        # Tworzenie skryptu VBS dla każdego obiektu
+        vbs_script_content += f"\tDim hopperTab_{i}({len(nj)})\n"
+        d = 0
+        for key, value in nj.items():
+            if (isinstance(value, int) or is_number(value)):  # Jeśli wartość jest intem
+                vbs_script_content += f"\thopperTab_{i}({d}) = {value.replace(',', '.')} '{key}\n"
+            elif (key != "Label"):  # Jeśli wartość jest stringiem i warunki
+                vbs_script_content += f"\thopperTab_{i}({d}) = SmartTags(\"{value}\") '{key}\n"
+            else:
+                vbs_script_content += f"\thopperTab_{i}({d}) = \"{value}\" '{key} \n"
+            
+            d=d+1
+
+
+        vbs_script_content += "\n"
+        dictionary_array += f"\thopperArray({i}) = hopperTab_{i}\n"
+
+
+    vbs_script_content =  vbs_script_content + "\n" + dictionary_array  + "\n" + '\tinitializehopper_IconWebUXW2A hopperArray\n'
+
+    # Zapis do pliku "proporties_of_objects.vbs"
+    vbs_file_path = f'proporties_of_objects_HOPPER_{nameOfFileTemp[0]}.txt'
+    if len(new_jsons) > 0:
+        with open(vbs_file_path, 'w') as file:
+            file.write(f'\nSub initialize_HOPPER_{nameOfFileTemp[0]}_WebUX(lineName, fullLineName)\n')
+            file.write(vbs_script_content)
+            file.write(f'\nEnd Sub\n')
+    
+        return vbs_file_path, f'initialize_HOPPER_{nameOfFileTemp[0]}_WebUX'
+    else:
+        return None, None
+========================================
+
+Filename: zczyttywanieMtrFqZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+3)
+        nj['Unit'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+4)
+        nj['MaxLimit'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieOutputValueZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywaniePIDZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        nj['PV_Unit'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+2)
+        nj['SP_Unit'] = wynikTemp['text'][0]['en-US']
+
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+3)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+
+        
+
+        
+    
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieSealZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieSequenceZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        tagSeq = nj['SEQUENCER_Status'].split('.')
+        czesciTagSeq = tagSeq[0]
+        nj['Tag'] = czesciTagSeq
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczyttywanieVavSmpVZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanie3WayValveSimpleD3_IconVZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanie3WayValveSimpleD3_IconZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanie3WayValveSimple_IconVZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanie3WayValveSimple_IconZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanie3WayValveSimple_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieAngInptZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['EngUnits'].split('.')
+        elementIDEngUnitsStr = czesci[2]
+        elementIDEngUnits = int(elementIDEngUnitsStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDEngUnits)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['EngUnits'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDEngUnits+1)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDEngUnits+2)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieArrowDownZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieArrow_LeftZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieArrow_UpZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieAuto_Bag_FilterZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieBarGraphFurnace_2ZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt-1)
+        nj['EngUnits'] = wynikTemp['text'][0]['en-US']
+
+
+
+        
+        
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieBarGraph_Furnace_HorizontalZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        nj['EngUnits'] = wynikTemp['text'][0]['en-US']
+
+
+
+        
+        
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieBarGraph_Furnance_2_Long_Label_FormatZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt-1)
+        nj['EngUnits'] = wynikTemp['text'][0]['en-US']
+
+
+
+        
+        
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieBead_MillZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieCartridge_FilterZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieCooler_MixerZJsonrPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieCtrVavVZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['FullTagName'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+        
+        
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieDI_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieDumpingUnitZJsonPlik.py
+    #for i, nj in enumerate(new_jsons):
+        # czesci = nj['Label'].split('.')
+        # elementIDStr = czesci[2]
+        # elementIDInt = int(elementIDStr)
+
+        # wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        # nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieEM_Electro_magnetic_separatorZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['label'] = wynikTemp['text'][0]['en-US']
+        # nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieFilter_PressZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieFlowBinFI_Icon_smallZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['FlowBin_Name'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['FlowBin_Name'] = wynikTemp['text'][0]['en-US']
+
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieFlowBinFU_Icon_smallZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieFlowBin_FI_ZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['FlowBin_Name'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['FlowBin_Name'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieFlowBin_FU_ZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['FlowBin_Name'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['FlowBin_Name'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieGas_Liquid_SeparatorZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieHydraulic_UnitZJson.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieIn_Line_FilterZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Label'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Label'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if 'tag' in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieKtronZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieLocalFilter_HFZJsonPlik.py
+    #for i, nj in enumerate(new_jsons):
+        # czesci = nj['Label'].split('.')
+        # elementIDStr = czesci[2]
+        # elementIDInt = int(elementIDStr)
+
+        # wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        # nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMF_IconZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Label'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Label'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMixerIconZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['PONumber'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['PONumber'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMotorFq_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+3)
+        nj['Unit'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+4)
+        nj['MaxLimit'] = wynikTemp['text'][0]['en-US']
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if 'tag' in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMotorSample_Icon_HIMTECHOverviewZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMotorSample_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMtrSampleZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMtrSmp_OvZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieMXSequence_IconZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Text'] = wynikTemp['text'][0]['en-US']
+        
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+2)
+        nj['PONumber'] = wynikTemp['text'][0]['en-US']
+
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywaniePaddle_DryerZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if "tag" in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywaniePressureVesselZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Text'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+3)
+        nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        #print(nj['Label'])
+        #print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywaniePressure_Vessel_smallZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Text'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Text']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieRoll_MillZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Label'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Label'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                
+                if 'tag' in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieRotaryValveZJsonPlik.py
+    #for i, nj in enumerate(new_jsons):
+        # czesci = nj['Label'].split('.')
+        # elementIDStr = czesci[2]
+        # elementIDInt = int(elementIDStr)
+
+        # wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        # nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieRotary_Magnet_FilterZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if "tag" in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieScattering_MachineZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if "tag" in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieScrew_Feeder_connetorZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if "tag" in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieScrew_Feeder_LeftZJsonPlik.py
+    #for i, nj in enumerate(new_jsons):
+        # czesci = nj['Label'].split('.')
+        # elementIDStr = czesci[2]
+        # elementIDInt = int(elementIDStr)
+
+        # wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        # nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieScrew_Feeder_RightZJsonPlik.py
+    #for i, nj in enumerate(new_jsons):
+        # czesci = nj['Label'].split('.')
+        # elementIDStr = czesci[2]
+        # elementIDInt = int(elementIDStr)
+
+        # wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        # nj['Label'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieScrew_Feeder_separatorZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                if "tag" in dj['attributes']:
+                    nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieScrubber_Demister_TankZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieSeal_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieSequenceFIZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+2)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Text'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieSequenceFUZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+2)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Text'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieSequenceWater_TankZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieSieveZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['label'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['label'] = wynikTemp['text'][0]['en-US']
+        # nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieTotalizer_IconZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        nj['CUR_Unit'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+2)
+        nj['SP1_Unit'] = wynikTemp['text'][0]['en-US']
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+5)
+        nj['REM_Unit'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieUnitZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['UnitNameText'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['UnitNameText'] = wynikTemp['text'][0]['en-US']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieVacuum_Kettle_DryerZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieVacuum_PumpZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieValveCtrl_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieValveCtrl_Icon_V_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieValveMotorZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['FullTagName'] = wynikTemp['text'][0]['en-US']
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Label'] = wynikTemp['text'][0]['en-US']
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieValveSimple_IconV_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieValveSimple_Icon_HIMTECHZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Tag'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        #print(elementIDEngUnits)
+        #print(text_jsons)
+        nj['Tag'] = wynikTemp['text'][0]['en-US']
+        nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieVavSmpZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        if 'Tag' in nj:
+            czesci = nj['Tag'].split('.')
+            #print(len(czesci))
+            if len(czesci) > 1:
+                elementIDStr = czesci[2]
+                elementIDInt = int(elementIDStr)
+
+                wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt+1)
+                #print(elementIDEngUnits)
+                #print(text_jsons)
+                nj['Tag'] = wynikTemp['text'][0]['en-US']
+                wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+                nj['Label'] = wynikTemp['text'][0]['en-US']
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieVibrator_Feeder_mirrorZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieVP_SeparatorZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieWaterTankZJsonPlik.py
+    for i, nj in enumerate(new_jsons):
+        czesci = nj['Text'].split('.')
+        elementIDStr = czesci[2]
+        elementIDInt = int(elementIDStr)
+
+        wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+        nj['Text'] = wynikTemp['text'][0]['en-US']
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieWater_Cooler_CondensorZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
+Filename: zczytywanieWater_Cooler_Heat_ExchangerZJsonPlik.py
+    # for i, nj in enumerate(new_jsons):
+    #     czesci = nj['Tag'].split('.')
+    #     elementIDStr = czesci[2]
+    #     elementIDInt = int(elementIDStr)
+
+    #     wynikTemp = znajdz_po_elementID(text_jsons, elementIDInt)
+    #     #print(elementIDEngUnits)
+    #     #print(text_jsons)
+    #     nj['Tag'] = wynikTemp['text'][0]['en-US']
+    #     nj['Label'] = nj['Tag']
+        
+
+
+
+    dynamic_jsons = []
+    for dyn in data['dynamics']:
+        dynamic_jsons.append(dyn)
+
+    #print(dynamic_jsons)
+
+    for nj in new_jsons:
+        element_id = nj['ElementID']
+        for dj in dynamic_jsons:
+            if dj['elementID'] == element_id and dj['target'] in nj:
+                nj[dj['target']] = dj['attributes']['tag']['address']
+
+
+    
+
+
+        
+        # print(nj['Label'])
+        # print(nj['EngUnits'])
+    #pprint.pprint(new_jsons)
+
+
+
+    #for nj in new_jsons:
+        #print(json.dumps(nj, indent=2))
+
+    file_content = ""
+
+========================================
+
